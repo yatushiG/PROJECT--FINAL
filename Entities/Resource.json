@@ -1,0 +1,70 @@
+{
+  "name": "Resource",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the resource"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the resource"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "notes",
+        "presentations",
+        "question_papers"
+      ],
+      "description": "Type of resource"
+    },
+    "subject": {
+      "type": "string",
+      "enum": [
+        "mathematics",
+        "physics",
+        "chemistry",
+        "biology",
+        "computer_science",
+        "english",
+        "history",
+        "economics",
+        "psychology",
+        "engineering",
+        "business",
+        "other"
+      ],
+      "description": "Subject category"
+    },
+    "course": {
+      "type": "string",
+      "description": "Course or class level"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL of the uploaded file"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Thumbnail image URL"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Tags for the resource"
+    },
+    "downloads": {
+      "type": "number",
+      "default": 0,
+      "description": "Download count"
+    }
+  },
+  "required": [
+    "title",
+    "type",
+    "subject"
+  ]
+}
